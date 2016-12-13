@@ -157,7 +157,7 @@ function postMessage3() {
 function postMessage4() {
   var botResponse, options, body, botReq;
 
-  botResponse = "*Bzzz* I am Cosmobot. I can do things like //bot, //meme, //link, and //sign. *Bzzz*";
+  botResponse = "*Bzzz* I am Cosmobot. I can do things like /bot, /meme, /link, and /sign. *Bzzz*";
 
   options = {
     hostname: 'api.groupme.com',
