@@ -4,10 +4,25 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 
 function respond() {
+  //changes message to var
   var request = JSON.parse(this.req.chunks[0]),
+      //bot's reponse
       botRegex = /^\/cool guy$/;
 
-  if(request.text && botRegex.test(request.text)) {
+  var words = request.words;
+  for (int i=0; i<words; i++){
+          if(words && botRegex.test(words)) {
+            this.res.writeHead(200);
+            postMessage();
+            this.res.end();
+          } else {
+            console.log("don't care");
+            this.res.writeHead(200);
+            this.res.end();
+          }
+        }
+  }//end respond
+  /*if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -17,6 +32,7 @@ function respond() {
     this.res.end();
   }
 }
+*/
 
 function postMessage() {
   var botResponse, options, body, botReq;
