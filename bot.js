@@ -1,13 +1,10 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-
+var request = JSON.parse(this.req.chunks[0])
 var botID = process.env.BOT_ID;
 
 function respond() {
-  //changes message to var
-  var request = JSON.parse(this.req.chunks[0]),
-      //bot's reponse
-      botRegex = /^\/bot$/;
+  var botRegex = /^\/bot$/;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
@@ -23,7 +20,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse = request;//cool();
 
   options = {
     hostname: 'api.groupme.com',
