@@ -9,7 +9,7 @@ function respond() {
       botRegey = /^\/link$/,
       botRegez = /^\/sign$/,
       botRegea = /^\/bot$/,
-      botRegeb = /^\/GoogleVoiceSignIn;
+      botRegeb = /^\/GoogleVoiceSignIn$/;
   
   if(request.text && botRegeb.test(request.text)) {
     this.res.writeHead(200);
