@@ -7,8 +7,8 @@ function respond() {
   //changes message to var
   var request = JSON.parse(this.req.chunks[0]),
       //bot's reponse
-      botRegex = /^\/cool guy$/;
-  /*if(request.text && botRegex.test(request.text)) {
+      botRegex = /^\bot$/;
+  if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
