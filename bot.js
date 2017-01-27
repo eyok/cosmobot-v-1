@@ -244,7 +244,7 @@ function postMessage5() {
 function postMessage6() {
   var botResponse, options, body, botReq;
 
-  botResponse = "147 Ruth Street. Yes it's some guy's house. Pull to the end of the driveway.";
+  botResponse = "147 Ruth Street. Yes, it's some guy's house. Pull to the end of the driveway.";
 
   options = {
     hostname: 'api.groupme.com',
