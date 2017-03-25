@@ -14,7 +14,7 @@ function respond() {
   
   if(request.text && botRegeb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2(require('cool-ascii-faces'));
+    postMessage2(cool());
     this.res.end();
   } else {
     console.log("don't care");
