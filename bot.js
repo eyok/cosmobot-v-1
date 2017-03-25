@@ -11,8 +11,8 @@ function respond() {
       botRegea = /^\/help$/,
       botRegeb = /^\/drop$/,
       botRegec = /^\/shift$/,
-      botReged = /^\/policies$/,
-      botRegee = /^\/reserve$/;
+      botReged = /^\/policies$/;
+      botRegee = /^\/reserve$/,
   
   if(request.text && ((botRegeb.test(request.text))||(botRegee.test(request.text)))) {
     this.res.writeHead(200);
