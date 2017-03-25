@@ -5,7 +5,6 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      //botRegex = /^\/meme$/,
       meme = /^\/meme$/,
       link = /^\/link$/,
       sign = /^\/sign$/,
@@ -50,7 +49,16 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  if((request.text && reserve.test(request.text))||(request.text && drop.test(request.text)) {
+  if(request.text && reserve.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  if(request.text && drop.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
     this.res.end();
@@ -68,44 +76,8 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  
- /* if(request.text && botRegey.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage2();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }*/
-  /*if(request.text && botRegez.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage3();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-  if(request.text && botRegea.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage4();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }
-   if(request.text && botRegec.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage6();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  }*/
-}
+
+}//end respond()
 
 function postMessage(s) {
   var botResponse, options, body, botReq;
