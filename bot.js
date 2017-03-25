@@ -8,13 +8,13 @@ function respond() {
       botRegex = /^\/meme$/,
       botRegey = /^\/link$/,
       botRegez = /^\/sign$/,
-      botRegea = /^\/bot$/,
+      help = /^\/bot$/,
       botRegeb = /^\/reserve$/,
       botRegec = /^\/nedza$/;
   
-  if(request.text && botRegeb.test(request.text)) {
+  if(request.text && help.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2(cool());
+    postMessage(cool());
     this.res.end();
   } else {
     console.log("don't care");
@@ -32,7 +32,7 @@ function respond() {
   }
  /* if(request.text && botRegey.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2();
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
@@ -41,7 +41,7 @@ function respond() {
   }*/
   if(request.text && botRegez.test(request.text)) {
     this.res.writeHead(200);
-    postMessage3();
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
@@ -50,7 +50,7 @@ function respond() {
   }
   if(request.text && botRegea.test(request.text)) {
     this.res.writeHead(200);
-    postMessage4();
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
@@ -59,7 +59,7 @@ function respond() {
   }
    if(request.text && botRegec.test(request.text)) {
     this.res.writeHead(200);
-    postMessage6();
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
