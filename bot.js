@@ -101,7 +101,7 @@ function postMessage() {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
-}
+} //meme
 
 function postMessage2(s) {
   var botResponse, options, body, botReq;
@@ -138,7 +138,7 @@ function postMessage2(s) {
   botReq.end(JSON.stringify(body));
 }
 
-function postMessage3() {
+/*function postMessage3() {
   var botResponse, options, body, botReq;
 
   botResponse = "~ If you don't have a Cosmic Sign then we won't help you pay for the parking ticket. ~";
@@ -274,5 +274,5 @@ function postMessage6() {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
-}
+}*/
 exports.respond = respond;
