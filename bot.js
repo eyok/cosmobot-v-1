@@ -14,7 +14,7 @@ function respond() {
   
   if(request.text && botRegeb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage2("TestB");
     this.res.end();
   } else {
     console.log("don't care");
@@ -30,7 +30,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  if(request.text && botRegey.test(request.text)) {
+ /* if(request.text && botRegey.test(request.text)) {
     this.res.writeHead(200);
     postMessage2();
     this.res.end();
@@ -38,7 +38,7 @@ function respond() {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  }
+  }*/
   if(request.text && botRegez.test(request.text)) {
     this.res.writeHead(200);
     postMessage3();
@@ -103,10 +103,10 @@ function postMessage() {
   botReq.end(JSON.stringify(body));
 }
 
-function postMessage2() {
+function postMessage2(s) {
   var botResponse, options, body, botReq;
 
-  botResponse = "http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j";
+  botResponse = s;
 
   options = {
     hostname: 'api.groupme.com',
