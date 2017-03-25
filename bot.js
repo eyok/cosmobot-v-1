@@ -13,7 +13,7 @@ function respond() {
       botRegeb = /^\/reserve$/,
       botRegec = /^\/nedza$/;
   
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
     this.res.end();
