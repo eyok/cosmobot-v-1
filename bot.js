@@ -8,22 +8,19 @@ function respond() {
       botRegex = /^\/meme$/,
       botRegey = /^\/link$/,
       botRegez = /^\/sign$/,
-      botRegea = /^\/help$/,
-      botRegeb = /^\/drop$/,
-      botRegec = /^\/shift$/,
-      botReged = /^\/policies$/;
-      botRegee = /^\/reserve$/,
+      botRegea = /^\/bot$/,
+      botRegeb = /^\/GoogleVoiceSignIn$/;
+      botRegec = /^\/nedza$/
   
-  if(request.text && ((botRegeb.test(request.text))||(botRegee.test(request.text)))) {
+  if(request.text && botRegeb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2("https://docs.google.com/a/switchit001.com/forms/d/1nCN3yKNGigaxiI2NOh7sDwrnwf4AvYDwlZujGDFHg_w/edit");
+    postMessage5();
     this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  } // drop
-  
+  }
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
@@ -32,59 +29,43 @@ function respond() {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  } //meme
-  
+  }
   if(request.text && botRegey.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
+    postMessage2();
     this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  } //link
-  
+  }
   if(request.text && botRegez.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2("~ If you don't have a Cosmic Sign then we won't help you pay for the parking ticket. ~");
+    postMessage3();
     this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  } //sign
-  
+  }
   if(request.text && botRegea.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2("Cosmobot commands: /link, /reserve, /drop, /shifts, /sign, /policies");
+    postMessage4();
     this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  } //help
-  
+  }
    if(request.text && botRegec.test(request.text)) {
     this.res.writeHead(200);
-    postMessage2("https://docs.google.com/document/d/1s4FsTDc3tbZMoiKq51gl26msLW2Op2VUhlQTHTtG1bg/edit");
+    postMessage6();
     this.res.end();
   } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
-  } //shift
-  
-    if(request.text && botReged.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage2("https://docs.google.com/document/d/1_ckZEVtIk2LLZupuimvTohWDX0hoRlNwODKlm03sMBA/edit");
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
-  } //policies
-  
-  
+  }
 }
 
 function postMessage() {
@@ -122,11 +103,11 @@ function postMessage() {
   botReq.end(JSON.stringify(body));
 }
 
-function postMessage2(var s) {
+function postMessage2() {
   var botResponse, options, body, botReq;
 
-  //botResponse = s;
-  botResponse = cool();
+  botResponse = "http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j";
+
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
@@ -156,7 +137,7 @@ function postMessage2(var s) {
   });
   botReq.end(JSON.stringify(body));
 }
-/*
+
 function postMessage3() {
   var botResponse, options, body, botReq;
 
@@ -195,7 +176,7 @@ function postMessage3() {
 function postMessage4() {
   var botResponse, options, body, botReq;
 
-  botResponse = "Cosmobot commands: /link, /reserve, /drop, /shifts, /sign, /policies";
+  botResponse = "*Bzzz* I am Cosmobot. I can do things like /bot, /meme, /link, /GoogleVoiceSignIn and /sign. *Bzzz*";
 
   options = {
     hostname: 'api.groupme.com',
@@ -293,5 +274,5 @@ function postMessage6() {
     console.log('timeout posting message '  + JSON.stringify(err));
   });
   botReq.end(JSON.stringify(body));
-}*/
+}
 exports.respond = respond;
