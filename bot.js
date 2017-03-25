@@ -122,7 +122,7 @@ function postMessage() {
   botReq.end(JSON.stringify(body));
 }
 
-function postMessage2(string s) {
+function postMessage2(var s) {
   var botResponse, options, body, botReq;
 
   botResponse = s;
