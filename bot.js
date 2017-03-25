@@ -8,11 +8,11 @@ function respond() {
       botRegex = /^\/meme$/,
       botRegey = /^\/link$/,
       botRegez = /^\/sign$/,
-      help = /^\/bot$/,
+      botRagea = /^\/bot$/,
       botRegeb = /^\/reserve$/,
       botRegec = /^\/nedza$/;
   
-  if(request.text && help.test(request.text)) {
+  if(request.text && botRegb.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
     this.res.end();
