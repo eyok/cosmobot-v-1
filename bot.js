@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       //botRegex = /^\/meme$/,
       meme = /^\/meme$/,
-      botRegey = /^\/link$/,
+      link = /^\/link$/,
       botRegez = /^\/sign$/,
       botRegea = /^\/bot$/,
       botRegeb = /^\/reserve$/,
@@ -22,9 +22,9 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  /*if(request.text && botRegex.test(request.text)) {
+  if(request.text && link.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postMessage("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
     this.res.end();
   } else {
     console.log("don't care");
