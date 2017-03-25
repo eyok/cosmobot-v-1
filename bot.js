@@ -8,7 +8,7 @@ function respond() {
       //botRegex = /^\/meme$/,
       meme = /^\/meme$/,
       link = /^\/link$/,
-      reserve = /^\/reserve$/,
+      botRegez = /^\/sign$/,
       botRegea = /^\/bot$/,
       botRegeb = /^\/reserve$/,
       botRegec = /^\/nedza$/;
@@ -17,21 +17,20 @@ function respond() {
     this.res.writeHead(200);
     postMessage(cool());
     this.res.end();
-  } else if (request.text && link.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
-    this.res.end();
-    else {
+  } else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
   }
-  
-  
-  
-  
-  
- 
+  if(request.text && link.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
  /* if(request.text && botRegey.test(request.text)) {
     this.res.writeHead(200);
     postMessage2();
