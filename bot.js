@@ -125,8 +125,8 @@ function postMessage() {
 function postMessage2(var s) {
   var botResponse, options, body, botReq;
 
-  botResponse = s;
-
+  //botResponse = s;
+  botResponse = cool();
   options = {
     hostname: 'api.groupme.com',
     path: '/v3/bots/post',
