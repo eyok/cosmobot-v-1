@@ -9,12 +9,12 @@ function respond() {
       botRegey = /^\/link$/,
       botRegez = /^\/sign$/,
       botRegea = /^\/bot$/,
-      botRegeb = /^\/GoogleVoiceSignIn$/;
+      botRegeb = /^\/reserve$/;
       botRegec = /^\/nedza$/
   
   if(request.text && botRegeb.test(request.text)) {
     this.res.writeHead(200);
-    postMessage5();
+    postMessage();
     this.res.end();
   } else {
     console.log("don't care");
