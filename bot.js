@@ -13,7 +13,8 @@ function respond() {
       drop = /^\/drop$/,
       shifts = /^\/shifts$/,
       policies = /^\/policies$/,
-      door = /^\/door$/;
+      door = /^\/door$/,
+      news = /^\/news$/;
   
   if(request.text && meme.test(request.text)) {
     this.res.writeHead(200);
@@ -90,6 +91,15 @@ function respond() {
   if(request.text && door.test(request.text)) {
     this.res.writeHead(200);
     postMessage("8953");
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }  
+  if(request.text && news.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/3o7abA4a0QCXtSxGN2/giphy.gif");
     this.res.end();
   } else {
     console.log("don't care");
