@@ -27,7 +27,7 @@ function respond() {
   }
   if(request.text && link.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.ordercosmic.com/admin?verifyMe=39Efkeo93j");
+    postMessage("This doesn't exist anymore.");
     this.res.end();
   } else {
     console.log("don't care");
@@ -45,7 +45,7 @@ function respond() {
   }
     if(request.text && help.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Cosmobot Commands: /link, /sign, /help (but you knew that), /reserve, /drop, /policies, /door, and /shifts. Enjoy!");
+    postMessage("Cosmobot Commands: /sign, /help (but you knew that), /reserve, /drop, /policies, /door, and /shifts. Enjoy!");
     this.res.end();
   } else {
     console.log("don't care");
