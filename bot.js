@@ -14,6 +14,7 @@ function respond() {
       shifts = /^\/shifts$/,
       policies = /^\/policies$/,
       door = /^\/door$/,
+      master = /^\/master$/,
       news = /^\/news$/;
   
   if(request.text && meme.test(request.text)) {
@@ -28,6 +29,15 @@ function respond() {
   if(request.text && link.test(request.text)) {
     this.res.writeHead(200);
     postMessage("This doesn't exist anymore.");
+    this.res.end();
+  } else {
+    console.log("don't care");
+    this.res.writeHead(200);
+    this.res.end();
+  }
+  if(request.text && master.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("What is it, peasant?");
     this.res.end();
   } else {
     console.log("don't care");
